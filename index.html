@@ -1,27 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/css/bootstrap.min.css' integrity='sha512-o/MhoRPVLExxZjCFVBsm17Pkztkzmh7Dp8k7/3JrtNCHh0AQ489kwpfA3dPSHzKDe8YCuEhxXq3Y71eb/o6amg==' crossorigin='anonymous'/>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.0/vue.js' integrity='sha512-4EMifNzsGH/ixIeXTy7stkY1hrlVrYfOXlBBG0sGkCtVzHoCsyVxfXkzILZAMs/TI6MBrfDDK9YYWmhaG6BF2A==' crossorigin='anonymous'></script>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Carosello News</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Slider</title>
 </head>
 <body>
-    <!-- Descrizione:
-    Far funzionare lo slider partendo dall’html ricevuto.
-    Al click su una freccia, l’immagine mostrata cambia.
-    la lista delle thumbs deve essere generata tramite un v-for
-    Bonus:
-    1- al click su una thumb, visualizzare in grande l’immagine corrispondente
-    2 - Al click sulle frecce, cambia l’immagine, ma si evidenzia anche la thumbnail corrispondente
-    3- applicare l’autoplay allo slider: ogni 3 secondi, cambia immagine automaticamente (vi servirà l’evento mounted() di vue)
-    4- quando il mouse va in hover sullo slider, bloccare l’autoplay e farlo riprendere quando esce -->
-    <div class="container" id="app">
+
+    <div id="app">
+
+        <div class="container" >
+            <div class="slider-wrapper" tabindex="0">
+
+                <div class="item">
+                    <img src="img/01.jpg" alt="Svezia" />
+                    <div class="text">
+                        <h3>Svezia</h3>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut
+                            veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="thumbs">
+                    <div class="prev"></div>
+                    <div class="next"></div>
+                    <div class="thumb active">
+                        <img src="img/01.jpg" alt="Svezia"/>
+                    </div>
+                    <div class="thumb">
+                        <img src="img/02.jpg" alt="Svizzera" />
+                    </div>
+                    <div class="thumb">
+                        <img src="img/03.jpg" alt="Gran Bretagna" />
+                    </div>
+                    <div class="thumb">
+                        <img src="img/04.jpg" alt="Germania" />
+                    </div>
+                    <div class="thumb">
+                        <img src="img/05.jpg" alt="Paradise" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
 
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
