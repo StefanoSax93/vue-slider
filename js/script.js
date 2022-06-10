@@ -47,8 +47,22 @@ const app = new Vue({
     data: {
         //prendo i dati dall'array slides
         slide: slides,
+        //aggiungo un indice per la slide
+        currentIndex: 0,
     },
 
     methods: {
+        //aggiungo una funzione per il click
+        downClick() {
+            if(this.currentIndex >= 0 && this.currentIndex < this.slide.length - 1) {
+                this.currentIndex++; ;
+            }
+        },
+        upClick() {
+            if(this.currentIndex > 0 && this.currentIndex < this.slide.length) {
+                this.currentIndex--;
+            }    
+        }
+
     },
 });

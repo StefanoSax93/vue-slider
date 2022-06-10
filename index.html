@@ -17,21 +17,20 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
-                    <img src="img/01.jpg" alt="Svezia" />
+                    <img :src="slide[currentIndex].image" alt="Svezia" />
                     <div class="text">
-                        <h3>Svezia</h3>
+                        <h3>{{slide[currentIndex].title}}</h3>
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut
-                            veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.
+                            {{slide[currentIndex].text}}
                         </p>
                     </div>
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev"></div>
-                    <div class="next"></div>
+                    <div class="prev" @click="upClick"></div>
+                    <div class="next" @click="downClick"></div>
                     <div v-for="thumb in slide" class="thumb">
-                        <img :src="thumb.image" alt="thumb.title"/>
+                        <img :src="thumb.image" :alt="thumb.title">
                     </div>
                 </div>
 
