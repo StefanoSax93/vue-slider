@@ -67,6 +67,9 @@ const app = new Vue({
                 this.currentIndex--;
             }    
         },
-
+        //aggiungo la funzione per il focus sulla thumb
+        thumbClick(index) {
+            this.currentIndex = index;
+        },
     },
 });
