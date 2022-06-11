@@ -23,7 +23,23 @@ const slides = [
         image: 'img/05.jpg',
         title: 'Paradise',
         text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
+    },
+    {
+        image: 'img/06.jpg',
+        title: 'Norvegia',
+        text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
+    },
+    {
+        image: 'img/07.jpg',
+        title: 'Italia',
+        text: 'Benvenuti nel paese più bello del mondo.',
+    },
+    {
+        image: 'img/08.jpg',
+        title: 'Giappone',
+        text: 'lorem ipsum dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
     }
+    
 ];
 
 console.log(slides);
