@@ -47,8 +47,6 @@ const app = new Vue({
     data: {
         //prendo i dati dall'array slides
         slide: slides,
-        //aggiungo una proprietà che mi permette di capire se l'immagine è in focus
-        clicked: false,
         //aggiungo un indice per la slide
         currentIndex: 0,
         
