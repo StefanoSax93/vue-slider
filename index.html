@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Carosello News</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/css/bootstrap.min.css' integrity='sha512-o/MhoRPVLExxZjCFVBsm17Pkztkzmh7Dp8k7/3JrtNCHh0AQ489kwpfA3dPSHzKDe8YCuEhxXq3Y71eb/o6amg==' crossorigin='anonymous'/>
     <link rel="stylesheet" href="css/style.css"/>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <title>Slider</title>
@@ -14,7 +15,7 @@
     <div id="app">
 
         <div class="container" >
-            <div class="slider-wrapper" tabindex="0" @mouseover="mouseEnter" @mouseout="mouseLeave">
+            <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
                     <img :src="slide[currentIndex].image" alt="Svezia" />
@@ -26,7 +27,7 @@
                     </div>
                 </div>
 
-                <div class="thumbs">
+                <div class="thumbs" @mouseover="mouseEnter" @mouseout="mouseLeave">
                     <div class="prev" @click="upClick"></div>
                     <div class="next" @click="downClick"></div>
                     <div v-for="(thumb, i) in slide" class="thumb" :class="{'active' : currentIndex === i}" @click="thumbClick(i)">
