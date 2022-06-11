@@ -50,7 +50,11 @@ const app = new Vue({
         //aggiungo un indice per la slide
         currentIndex: 0,
         
-
+        timer:null,
+    },
+    
+    mounted: function() {
+        this.nextSlide();;
     },
 
     methods: {
@@ -69,5 +73,20 @@ const app = new Vue({
         thumbClick(index) {
             this.currentIndex = index;
         },
+        next() {
+            if(this.currentIndex < this.slide.length - 1) {
+            this.currentIndex += 1;
+            } else {
+            this.currentIndex = 0;
+            }
+        },
+        nextSlide() {
+            this.timer = setInterval(this.next, 3000);             
+        },
     },
 });
+
+
+
+
+
