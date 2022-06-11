@@ -49,8 +49,6 @@ const app = new Vue({
         slide: slides,
         //aggiungo un indice per la slide
         currentIndex: 0,
-        
-        timer:null,
     },
     
     mounted: function() {
@@ -83,6 +81,14 @@ const app = new Vue({
         nextSlide() {
             this.timer = setInterval(this.next, 3000);             
         },
+        //quando vado in hover mi fermo l'autoplay
+        mouseEnter() {
+            clearInterval(this.timer);
+        },
+        //quando esco dall'hover riprendo l'autoplay
+        mouseLeave() {
+            this.nextSlide();
+        }
     },
 });
 
