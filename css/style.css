@@ -13,8 +13,8 @@
 
 .item {
     float: left;
-    width: 700px;
-    height: 300px;
+    width: 900px;
+    height: 500px;
     position: relative;
 }
 
@@ -34,13 +34,13 @@
 
 .thumbs {
     float: left;
-    height: 300px;
+    height: 500px;
     background: #000;
     position: relative;
 }
 
 .thumb {
-    height: calc((300px) / 5);
+    height: calc((500px) / 5);
     opacity: 0.5;
 }
 
