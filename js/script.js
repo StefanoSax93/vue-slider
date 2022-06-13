@@ -76,12 +76,16 @@ const app = new Vue({
         downClick() {
             if(this.currentIndex >= 0 && this.currentIndex < this.slide.length - 1) {
                 this.currentIndex++; 
+            } else {
+                this.currentIndex = 0;
             }
         },
         upClick() {
             if(this.currentIndex > 0 && this.currentIndex < this.slide.length) {
                 this.currentIndex--;
-            }    
+            } else {
+                this.currentIndex = this.slide.length - 1;
+            }   
         },
         //aggiungo la funzione per il focus sulla thumb
         thumbClick(index) {
